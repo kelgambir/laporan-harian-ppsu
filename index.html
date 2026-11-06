@@ -56,10 +56,20 @@
     }
 
     .brand {
-      background: var(--green);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background:
+        linear-gradient(180deg, rgba(10, 45, 33, .48), rgba(10, 45, 33, .78)),
+        url("hero-gambir.jpg") center 46% / cover no-repeat;
       color: white;
       border-radius: 22px;
-      padding: 28px 22px 25px;
+      padding: 36px 22px;
       text-align: center;
       box-shadow: 0 8px 24px #1047341f;
     }
@@ -73,6 +83,8 @@
       display: grid;
       place-items: center;
       font-size: 30px;
+      background: rgba(10, 45, 33, .28);
+      backdrop-filter: blur(3px);
     }
 
     .eyebrow {
@@ -93,6 +105,18 @@
       line-height: 1.5;
       margin: 0;
       color: #e4f3ec;
+    }
+
+    @media (max-width: 480px) {
+      .brand {
+        min-height: 290px;
+        background-position: center 46%;
+        padding: 30px 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
     }
 
     .intro {
